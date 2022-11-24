@@ -1,0 +1,18 @@
+run:
+	export CGO_CFLAGS="-I $(python3 -c 'import numpy; print(numpy.get_include())')"
+	go install gdsim.go
+	rm -rf output/*
+	rm -rf summary/*
+	gdsim -files <file path> -topology <topology path> -scheduler GEODIS <job path> > <output/workload_geodis>
+	gdsim -files <file path> -topology <topology path> -scheduler SWAG <job path> > <output/workload_swag>
+	gdsim -files <file path> -topology <topology path> -scheduler ADAPTIVE <job path> > <output/workload_adaptive>
+	python3 utils/summarize_data.py <output/workload_geodis> >summary/workload_geodis
+	python3 utils/summarize_data.py <output/workload_swag> >summary/workload_swag
+	python3 utils/summarize_data.py <output/workload_adaptive> >summary/workload_adaptive
+
+	
+
+
+	
+
+

@@ -1,0 +1,10 @@
+run:
+	rm -rf training_data/*
+	export CGO_CFLAGS="-I $(python3 -c 'import numpy; print(numpy.get_include())')"
+	go install gdsim.go
+	gdsim -files <file path> -topology <topology path> -scheduler ADAPTIVE -train <output training data csv file> <job path>
+	gdsim -files <file path> -topology <topology path> -scheduler ADAPTIVE -train LEARN <job path>
+
+
+
+
