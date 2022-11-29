@@ -21,9 +21,9 @@ Run the following commands from the root directory of this project.
 1. Run these commands for different workloads or add these commands in a makefile:
 
   go install gdsim.go <br />
-  gdsim -files &lt;file path&gt; -topology <topology path> -scheduler ADAPTIVE -train <output training data csv file> <job path> <br />
-  python3 utils/create_training_data.py <folder containing csv files> <output csv file> <br />
-  gdsim -files <file path> -topology <topology path> -scheduler ADAPTIVE -train LEARN <job path> <br />
+  gdsim -files &lt;file path&gt; -topology &lt;topology path&gt; -scheduler ADAPTIVE -train &lt;output training data csv file&gt; &lt;job path&gt; <br />
+  python3 utils/create_training_data.py &lt;folder containing csv files&gt; &lt;output csv file&gt; <br />
+  gdsim -files &lt;file path&gt; -topology &lt;topology path&gt; -scheduler ADAPTIVE -train LEARN &lt;job path&gt; <br />
 
   (OR) <br />
   make -f  Makefile.train <br />
@@ -33,9 +33,9 @@ Run the following commands from the root directory of this project.
 Run these commands for different workloads or add these commands in a makefile:
 
 go install gdsim.go <br />
-gdsim -files <file path> -topology <topology path> -scheduler GEODIS <job path> > <output/workload_geodis> <br />
-gdsim -files <file path> -topology <topology path> -scheduler SWAG <job path> > <output/workload_swag> <br />
-gdsim -files <file path> -topology <topology path> -scheduler ADAPTIVE <job path> > <output/workload_adaptive> <br />
+gdsim -files &lt;file path> -topology &lt;topology path&gt; -scheduler GEODIS &lt;job path&gt; > <output/workload_geodis> <br />
+gdsim -files &lt;file path> -topology &lt;topology path&gt; -scheduler SWAG &lt;job path&gt; > <output/workload_swag> <br />
+gdsim -files &lt;file path> -topology &lt;topology path&gt; -scheduler ADAPTIVE &lt;job path&gt; > <output/workload_adaptive> <br />
 python3 utils/summarize_data.py <output/workload_geodis> >summary/workload_geodis <br />
 python3 utils/summarize_data.py <output/workload_swag> >summary/workload_swag <br />
 python3 utils/summarize_data.py <output/workload_adaptive> >summary/workload_adaptive <br />
