@@ -3,6 +3,7 @@ run:
 	export CGO_CFLAGS="-I $(python3 -c 'import numpy; print(numpy.get_include())')"
 	go install gdsim.go
 	gdsim -files <file path> -topology <topology path> -scheduler ADAPTIVE -train <output training data csv file> <job path>
+	python3	<script> <folder containing multiple csv files> <name of new csv file>
 	gdsim -files <file path> -topology <topology path> -scheduler ADAPTIVE -train LEARN <job path>
 
 
