@@ -14,7 +14,7 @@ PyObject *load_func(const char *module_name, char *func_name) {
 
    
   PyRun_SimpleString("import sys");
-  PyRun_SimpleString("sys.path.append(\"/home/supraja/proj/adaptive_final/ml\")");
+  PyRun_SimpleString("sys.path.append(\"/home/GDSim-Adaptive-Scheduler/ml\")");  // update the correct path
   PyObject *py_mod_name = PyUnicode_FromString(module_name); 
   
   if (py_mod_name == NULL) {
