@@ -22,14 +22,11 @@ Run the following commands from the root directory of this project.
 
 go install gdsim.go
 gdsim -files <file path> -topology <topology path> -scheduler ADAPTIVE -train <output training data csv file> <job path>
+python3 utils/create_training_data.py <folder containing csv files> <output csv file>
 gdsim -files <file path> -topology <topology path> -scheduler ADAPTIVE -train LEARN <job path>
 
                         (OR) 
 make -f  Makefile.train
-
-2. Aggregate multiple training data into 1 training data using the following command:
-python3 utils/create_training_data.py training_data all_training_data.csv
-
 
 ### How to run Adaptive Scheduler for different workloads
 
